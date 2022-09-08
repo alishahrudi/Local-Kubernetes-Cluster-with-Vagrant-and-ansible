@@ -1,0 +1,20 @@
+# Lines beginning with a # are comments, and are only included for
+# illustration. These comments are overkill for most inventory files.
+# Application servers
+
+[master]
+master ansible_host=192.168.60.10
+
+[nodes]
+192.168.60.11
+192.168.60.12
+192.168.60.13
+192.168.60.14
+
+
+# Variables that will be applied to all servers
+[all:vars]
+ansible_ssh_user=vagrant
+ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
+#ansible_python_interpreter=/usr/bin/python
+become=yes
